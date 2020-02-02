@@ -1,0 +1,20 @@
+<div style="max-width: 1000px;">
+  <mat-toolbar color="primary" style="border-radius: 5px 5px 0 0;">
+    <mat-toolbar-row>
+      <button mat-button [routerLink]="['/']">Home</button>
+      <button mat-button [routerLink]="['/news']">News</button>
+      <button mat-button>...</button>
+      <span style="flex: 1 1 auto;"></span>
+      <button mat-button [matMenuTriggerFor]="settingsMenu"><mat-icon style="padding: 0 15px;" aria-hidden="false" aria-label="">settings</mat-icon></button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-menu #settingsMenu="matMenu">
+    <button mat-menu-item>Settings</button>
+    <button mat-menu-item>Help</button>
+  </mat-menu>
+
+  <mat-card>
+    <router-outlet></router-outlet>
+  </mat-card>
+</div>
